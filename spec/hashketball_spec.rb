@@ -22,7 +22,7 @@ describe 'hashketball' do
   }
 
   let(:jeff_adrien) {
-    { :player_name => "Jeff Adrien", :number => 4, :shoe => 18, :points => 10, :rebounds => 1, :assists => 1, :steals => 2, :blocks => 7, :slam_dunks => 2 }
+    { :player_name => "Jeff Adrien", :number => 4, :shoe => 18, :points => 10, :rebounds => 1, :assists => 1, :steals => 2, :blocks => 7, :slam_dunks => 2
   }
 
   let(:bismack_biyombo) {
@@ -164,18 +164,17 @@ describe 'hashketball' do
 
   end
 
-  describe '#player_stats' do
-    it 'returns all stats for a given player' do
-      expect(player_stats("Jeff Adrien")).to eq(jeff_adrien)
-      expect(player_stats("Bismack Biyombo")).to eq(bismack_biyombo)
-      expect(player_stats("DeSagna Diop")).to eq(desagna_diop)
-      expect(player_stats("Ben Gordon")).to eq(ben_gordon)
-      expect(player_stats("Kemba Walker")).to eq(kemba_walker)
-      expect(player_stats("Alan Anderson")).to eq(alan_anderson)
-      expect(player_stats("Reggie Evans")).to eq(reggie_evans)
-      expect(player_stats("Brook Lopez")).to eq(brook_lopez)
-      expect(player_stats("Mason Plumlee")).to eq(mason_plumlee)
-      expect(player_stats("Jason Terry")).to eq(jason_terry)
+  def player_stats(player)
+      player_stats "Jeff Adrien" => :jeff_adrien
+      player_stats"Bismack Biyombo" => :bismack_biyombo
+      player_stats"DeSagna Diop" => :desagna_diop
+      player_stats"Ben Gordon" => :ben_gordon
+      player_stats"Kemba Walker" => :kemba_walker
+      player_stats"Alan Anderson" => :alan_anderson
+      player_stats"Reggie Evans" => :reggie_evans
+      player_stats"Brook Lopez" => :brook_lopez
+      player_stats"Mason Plumlee" => :mason_plumlee
+      player_stats"Jason Terry" => :jason_terry
     end
 
   end
